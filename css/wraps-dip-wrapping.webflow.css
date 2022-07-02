@@ -706,6 +706,13 @@ img {
 .grid {
   -ms-grid-rows: minmax(300px, 1px) minmax(300px, 300px) minmax(300px, 300px);
   grid-template-rows: minmax(300px, 1px) minmax(300px, 300px) minmax(300px, 300px);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.grid:hover {
+  -webkit-transform: scale3d(1none, 1none, 1none);
+  transform: scale3d(1none, 1none, 1none);
 }
 
 .image {
@@ -723,8 +730,6 @@ img {
 .img {
   width: 500px;
   height: 300px;
-  -webkit-filter: blur(3px) grayscale(100%);
-  filter: blur(3px) grayscale(100%);
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   -o-object-fit: cover;
@@ -732,8 +737,16 @@ img {
 }
 
 .img:hover {
+  margin-top: 0px;
+  margin-right: 27px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
   -webkit-filter: none;
   filter: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .div-block {
